@@ -2,7 +2,7 @@
 
 I mostly followed [this github page](https://github.com/atgu/cromwell_google_setup).
 
-## Create VM and google bucket specific for cromwell server.
+## Create VM and google bucket specific to cromwell server.
 
 Here `long-covid-hg-cromwell` and gs://long-covid-hg-cromwell 
 
@@ -37,7 +37,7 @@ sudo chown [username] credentialdir
 ```
 gcloud iam service-accounts keys create credentialdir/default_credentials.json --iam-account [service account name]
 ```
-The instruction how to create `[service account name]` is [here](https://cloud.google.com/iam/docs/creating-managing-service-accounts)
+The instruction of how to create `[service account name]` is [here](https://cloud.google.com/iam/docs/creating-managing-service-accounts)
 
 8. Change directories via: `cd cromwell/scripts/docker-compose-mysql`
 Copy configuration template from git config/application.conf to `compose/cromwell/app-config/`
