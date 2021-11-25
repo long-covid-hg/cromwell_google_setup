@@ -40,7 +40,7 @@ gcloud iam service-accounts keys create credentialdir/default_credentials.json -
 The instruction of how to create `[service account name]` is [here](https://cloud.google.com/iam/docs/creating-managing-service-accounts)
 
 8. Change directories via: `cd cromwell/scripts/docker-compose-mysql`
-Copy configuration template from git config/application.conf to `compose/cromwell/app-config/`
+Copy configuration template from git [config/application.conf](https://github.com/atgu/cromwell_google_setup/blob/master/application.conf) to `compose/cromwell/app-config/`
 
 9.Modify following rows to appropriate values. Bucket should be a regional bucket in the same region so the cromwell server is a) the most efficient and b) does not incur data transfer charges!. Zones control the default zone of the VM's cromwell is spinning up. Zones should be the same zone where the cromwell root is to avoid egress charges and for fast data transfer. These can be changed in wdl runtime attributes per task.
 
